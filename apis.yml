@@ -1,23 +1,93 @@
 aid: lendbuzz
 name: Lendbuzz
-description: 'Lendbuzz is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Lendbuzz is a Boston-headquartered auto finance platform, founded in
+  2015, that uses machine learning and alternative data — bank transaction history,
+  education, employment and income signals rather than a traditional FICO file — to
+  underwrite consumers with thin or no US credit history. The company originates retail
+  auto loans through a nationwide network of franchise and independent dealerships,
+  and also provides dealers with floor planning and an AI-assisted "Express Contract"
+  digital contracting flow. Dealers submit and manage deals through the Lendbuzz Dealer
+  Portal at app.lendbuzz.com, or by routing credit applications through the Dealertrack
+  and RouteOne F&I networks; consumers use a separate Client Portal. Lendbuzz Funding,
+  LLC is a licensed lender (NMLS ID #1636296) and funds originations through recurring
+  asset-backed securitizations. As of this profiling pass Lendbuzz publishes no public
+  developer portal, API documentation, or machine-readable API contract — partner integration
+  is intermediated by Dealertrack and RouteOne.'
 url: https://raw.githubusercontent.com/api-evangelist/lendbuzz/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/62ed374a7616c514c0bbad26/68d60c7c8b5cfcfd77c7615b_LBZ-OG-Home.jpg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-08-01 — identity + probes; no public API surface found
 specificationVersion: '0.20'
 created: '2026-08-01'
 modified: '2026-08-01'
 tags:
 - Company
+- Auto Lending
+- Automotive
+- Financial Services
+- Fintech
+- Lending
+- Credit
+- Machine Learning
+- Consumer Finance
+- Dealers
 apis: []
+x-enrichment:
+  date: '2026-08-01'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/lendbuzz-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/lendbuzz_stock/
+  url: https://www.lendbuzz.com/
+- type: About
+  url: https://www.lendbuzz.com/about
+- type: Blog
+  url: https://www.lendbuzz.com/dealer-resources
+- type: News
+  url: https://www.lendbuzz.com/news
+- type: Support
+  url: https://www.lendbuzz.com/contact
+- type: FAQ
+  url: https://www.lendbuzz.com/faq
+- type: Onboarding
+  url: https://www.lendbuzz.com/onboarding
+- type: SignUp
+  url: https://app.lendbuzz.com/dealers/signup
+- type: Login
+  url: https://app.lendbuzz.com/dealer_portal
+- type: Demo
+  url: https://www.lendbuzz.com/book-a-demo
+- type: TermsOfService
+  url: https://www.lendbuzz.com/tos
+- type: PrivacyPolicy
+  url: https://www.lendbuzz.com/privacy
+- type: StatusPage
+  url: https://www.lendbuzz.com/system-status
+- type: SLA
+  url: https://www.lendbuzz.com/service-level-agreement
+- type: Licensing
+  url: https://www.lendbuzz.com/state-licenses
+- type: Disclosures
+  url: https://www.lendbuzz.com/state-disclosures
+- type: Careers
+  url: https://www.lendbuzz.com/careers
+- type: GitHubOrganization
+  url: https://github.com/LendBuzz
+- type: Lifecycle
+  url: lifecycle/lendbuzz-lifecycle.yml
+- type: Conformance
+  url: conformance/lendbuzz-conformance.yml
+- type: Compliance
+  url: https://www.lendbuzz.com/state-licenses
+- type: LLMsTxt
+  url: llms/lendbuzz-llms.txt

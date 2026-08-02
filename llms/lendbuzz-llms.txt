@@ -1,0 +1,52 @@
+# Lendbuzz
+
+> Lendbuzz is a Boston-headquartered auto finance platform (founded 2015) that uses machine learning and alternative data — bank transaction history, education, employment and income signals rather than a traditional FICO file — to underwrite consumers with thin or no US credit history. It originates retail auto loans through a nationwide dealership network and provides dealers with floor planning and an AI-assisted "Express Contract" digital contracting flow. All loans are made by Lendbuzz Funding, LLC (NMLS ID #1636296).
+
+## API surface
+
+Lendbuzz publishes **no public API, no developer portal, and no machine-readable API contract**
+(verified 2026-08-01). Dealer integration is intermediated by the **Dealertrack** and **RouteOne**
+F&I networks — dealers submit credit applications through those platforms or directly in the
+Lendbuzz Dealer Portal. `api.lendbuzz.com` resolves in DNS but is not publicly reachable.
+
+## Applications
+
+- [Dealer Portal](https://app.lendbuzz.com/dealer_portal): Where dealers submit deals, link customer bank accounts (Plaid), upload documents, and request contracts.
+- [Dealer Sign Up](https://app.lendbuzz.com/dealers/signup): Dealer onboarding.
+- [Dealer onboarding guide](https://www.lendbuzz.com/onboarding): Step-by-step first-deal walkthrough — application, bank linking, document upload, DocuSign contract, funding documents.
+
+## Products
+
+- [For dealers](https://www.lendbuzz.com/dealers): Retail auto financing for franchise and independent dealerships.
+- [Floor planning](https://www.lendbuzz.com/floor-planning): Inventory financing for dealers.
+- [Express Contract](https://www.lendbuzz.com/express-contract): AI-assisted digital contracting.
+
+## Operations
+
+- [System Status](https://www.lendbuzz.com/system-status): Self-hosted status page covering RouteOne, Dealertrack, Client Portal, Dealer Portal and Front End, plus maintenance notifications.
+- [Service Level Agreement](https://www.lendbuzz.com/service-level-agreement): Downloadable SLA PDF.
+
+## Company
+
+- [About](https://www.lendbuzz.com/about)
+- [News](https://www.lendbuzz.com/news)
+- [Dealer Resources / articles](https://www.lendbuzz.com/dealer-resources)
+- [FAQ](https://www.lendbuzz.com/faq)
+- [Contact](https://www.lendbuzz.com/contact)
+- [Careers](https://www.lendbuzz.com/careers)
+- [GitHub organization](https://github.com/LendBuzz): Two public repositories (an interview exercise and a versioning GitHub Action) — no SDKs.
+
+## Legal and licensing
+
+- [Terms and Conditions](https://www.lendbuzz.com/tos)
+- [Privacy Policy](https://www.lendbuzz.com/privacy)
+- [State Licenses](https://www.lendbuzz.com/state-licenses)
+- [State Disclosures](https://www.lendbuzz.com/state-disclosures)
+
+## API Evangelist artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/lendbuzz/refs/heads/main/apis.yml)
+- lifecycle/lendbuzz-lifecycle.yml — status page, SLA, release cadence
+- conformance/lendbuzz-conformance.yml — regulatory posture
+- security/lendbuzz-domain-security.yml — TLS/HSTS/DNS probe results
+- well-known/lendbuzz-well-known.yml — /.well-known/ probe record (nothing published)

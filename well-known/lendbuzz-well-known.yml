@@ -1,0 +1,38 @@
+generated: '2026-08-01'
+method: probed
+source: live HTTPS probes of every resolvable Lendbuzz host
+summary:
+  documents_found: 0
+  note: No /.well-known/ discovery documents are published on any Lendbuzz host. The
+    marketing site (Webflow) answers 404 for every path; the dealer/client application
+    host answers 200 with an HTML redirect shell for unknown paths, which is a
+    single-page-app catch-all and NOT a discovery document — every 200 below was
+    verified to be HTML, not JSON.
+hosts:
+- host: https://www.lendbuzz.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://lendbuzz.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+- host: https://app.lendbuzz.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://api.lendbuzz.com
+  unreachable: true
+  note: DNS resolves but TCP 443/80 time out; no documents could be probed.
+x-evidence:
+  fetched: '2026-08-01'
+  method: curl -s -o /dev/null -w '%{http_code}|%{content_type}' -m 12 -L

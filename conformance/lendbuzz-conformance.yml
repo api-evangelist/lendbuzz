@@ -1,0 +1,48 @@
+generated: '2026-08-01'
+method: searched
+source: https://www.lendbuzz.com/state-licenses
+scope: regulatory
+note: Lendbuzz publishes no machine-readable API contract, so no API/technical standard
+  (OAuth2, OIDC, RFC 9457, FAPI, JSON:API, …) can be asserted either way from a spec.
+  What Lendbuzz does publish is a consumer-lending regulatory posture; that is captured
+  here. Absence of a technical standard below means "not evidenced", not "violated".
+standards:
+- id: nmls-licensed-lender
+  conforms: true
+  evidence: 'All loans are made by Lendbuzz Funding, LLC — NMLS ID #1636296, verifiable
+    at nmlsconsumeraccess.org (stated site-wide and on /state-licenses).'
+- id: us-state-lending-licenses
+  conforms: true
+  evidence: 'Published state license documents for Michigan, Missouri (Certificate of
+    Registration 2026 + max rate and fee schedule), Nevada (Installment Loan License),
+    South Carolina (Supervised Lenders License SLW1 #1636296, consumer grantor certificate,
+    maximum rate schedule) and Virginia (Certificate of Registration).'
+  url: https://www.lendbuzz.com/state-licenses
+- id: state-consumer-disclosures
+  conforms: true
+  evidence: Dedicated state disclosures page published at /state-disclosures.
+  url: https://www.lendbuzz.com/state-disclosures
+- id: e-sign-electronic-consent
+  conforms: true
+  evidence: Published electronic consent and credit consent pages (/electronic-consent,
+    /credit-consent); contracting is executed via DocuSign per the published onboarding
+    guide.
+- id: oauth2
+  conforms: false
+  evidence: No public API, no OpenAPI securitySchemes, no /.well-known/oauth-authorization-server
+    (404 on every host probed).
+- id: openid-connect
+  conforms: false
+  evidence: /.well-known/openid-configuration returned 404 on every host probed.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No public API contract to evaluate.
+- id: soc2
+  conforms: null
+  evidence: No trust center, security page, or certification claim found on any Lendbuzz
+    host (probe-security-programs.py returned trust=none).
+x-evidence:
+  fetched: '2026-08-01'
+  urls:
+  - {url: 'https://www.lendbuzz.com/state-licenses', http_status: 200}
+  - {url: 'https://www.lendbuzz.com/state-disclosures', http_status: 200}

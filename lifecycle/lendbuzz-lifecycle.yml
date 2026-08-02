@@ -1,0 +1,56 @@
+generated: '2026-08-01'
+method: searched
+source: https://www.lendbuzz.com/system-status
+scope: platform
+note: Lendbuzz publishes no public API, so this lifecycle profile covers the platform
+  and dealer/client portals rather than a versioned API contract.
+versioning:
+  scheme: release-train
+  observed: Release identifiers of the form "26.2" (year.release) appear in the
+    published maintenance notifications; also "V4" for the underlying platform.
+  docs: null
+  note: Derived from the wording of published status-page maintenance notices — Lendbuzz
+    publishes no versioning policy document.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No deprecation policy is published.
+sla:
+  url: https://www.lendbuzz.com/service-level-agreement
+  document: https://cdn.prod.website-files.com/63061b613e00059482da60fe/65ce2a42e5832f5b7ee4ccdc_Lendbuzz_SLA_2024.pdf
+  document_title: Lendbuzz_SLA_2024.pdf
+  uptime_target: null
+  note: The SLA page links a downloadable 2024 PDF; the uptime target is inside the
+    PDF and was not transcribed here.
+status_page: https://www.lendbuzz.com/system-status
+status_page_hosted: self-hosted (Webflow page, not Statuspage.io/Instatus)
+monitored_components:
+- name: RouteOne
+  kind: external-integration
+- name: Dealertrack
+  kind: external-integration
+- name: Client Portal
+  kind: application
+- name: Dealer Portal
+  kind: application
+- name: Front End
+  kind: application
+maintenance_window:
+  observed: Sunday early-morning US Eastern windows (e.g. 05:00–08:15 ET) for platform
+    and database upgrades.
+recent_notifications:
+- {date: '2026-05-17', kind: scheduled-maintenance, title: Scheduled Maintenance - System Upgrade}
+- {date: '2026-03-07', kind: scheduled-maintenance, title: Scheduled Maintenance - Mandatory Server Upgrades}
+- {date: '2026-03-02', kind: scheduled-maintenance, title: Scheduled Maintenance - Release 26.2 (Canary)}
+- {date: '2026-02-28', kind: scheduled-maintenance, title: Scheduled Database Maintenance - V4 26.2 Release}
+- {date: '2026-02-28', kind: scheduled-maintenance, title: Scheduled Database Maintenance (Test Environment Only)}
+- {date: '2026-02-22', kind: scheduled-maintenance, title: Production Database Update}
+- {date: '2025-10-26', kind: scheduled-maintenance, title: Maintenance - System Upgrade}
+- {date: '2025-10-20', kind: incident, title: Elevated Errors}
+- {date: '2024-02-01', kind: incident, title: Elevated /transactions/sync errors}
+deprecated_operations: []
+x-evidence:
+  fetched: '2026-08-01'
+  urls:
+  - {url: 'https://www.lendbuzz.com/system-status', http_status: 200}
+  - {url: 'https://www.lendbuzz.com/service-level-agreement', http_status: 200}
