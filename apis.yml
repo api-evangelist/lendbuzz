@@ -14,6 +14,9 @@ description: 'Lendbuzz is a Boston-headquartered auto finance platform, founded 
   developer portal, API documentation, or machine-readable API contract — partner integration
   is intermediated by Dealertrack and RouteOne.'
 url: https://raw.githubusercontent.com/api-evangelist/lendbuzz/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "enrichment pass 2026-08-01 — identity + probes; no public API surface found"
 deliveryModel:
   model: saas
   open_source: false
