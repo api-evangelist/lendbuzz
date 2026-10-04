@@ -52,11 +52,11 @@ tags:
 - Company
 - Auto Lending
 - Automotive
-- Financial-Services
+- Financial Services
 - Fintech
 - Lending
 - Credit
-- Machine-Learning
+- Machine Learning
 - Consumer Finance
 - Dealers
 tags_raw:
@@ -70,6 +70,8 @@ tags_raw:
 - Machine Learning
 - Consumer Finance
 - Dealers
+- Financial-Services
+- Machine-Learning
 apis: []
 x-enrichment:
   date: '2026-08-01'
