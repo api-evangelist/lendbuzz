@@ -64,46 +64,87 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Lendbuzz is a Boston-headquartered auto finance platform, founded in 2015, that uses machine learning
-and alternative data — bank transaction history, education, employment and income signals rather than a
-traditional FICO file — to underwrite consumers with thin or no US credit history. It originates retail
-auto loans through a nationwide network of franchise and independent dealerships, and provides dealers
-with floor planning and an AI-assisted "Express Contract" digital contracting flow. All loans are made by
-Lendbuzz Funding, LLC (NMLS ID #1636296).
+Lendbuzz is a Boston-headquartered auto finance platform, founded in 2015, that uses machine learning and alternative data — bank transaction history, education, employment and income signals rather than a traditional FICO file — to underwrite consumers with thin or no US credit history. The company originates retail auto loans through a nationwide network of franchise and independent dealerships, and also provides dealers with floor planning and an AI-assisted "Express Contract" digital contracting flow. Dealers submit and manage deals through the Lendbuzz Dealer Portal at app.lendbuzz.com, or by routing credit applications through the Dealertrack and RouteOne F&I networks; consumers use a separate Client Portal. Lendbuzz Funding, LLC is a licensed lender (NMLS ID #1636296) and funds originations through recurring asset-backed securitizations. As of this profiling pass Lendbuzz publishes no public developer portal, API documentation, or machine-readable API contract — partner integration is intermediated by Dealertrack and RouteOne.
 
-- Website: https://www.lendbuzz.com/
-- Dealer Portal: https://app.lendbuzz.com/dealer_portal
-- System Status: https://www.lendbuzz.com/system-status
-- GitHub: https://github.com/LendBuzz
+**Areas:** Company · Auto Lending · Automotive · Financial Services · Fintech · Lending · Credit · Machine Learning · Consumer Finance · Dealers
 
-## API surface
+## Lendbuzz on APIs.io
 
-**No public API.** Contract discovery run 2026-08-01 found no OpenAPI/Swagger, no GraphQL, no MCP server,
-and no A2A agent card on any Lendbuzz host:
+Everything profiled for Lendbuzz is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lendbuzz/](https://apis.io/providers/lendbuzz/)** — or go straight to one of the APIs or properties below.
 
-| Probe | Result |
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lendbuzz Domain Security](https://apis.io/security/lendbuzz/lendbuzz-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.lendbuzz.com/)
+- [Sign up](https://app.lendbuzz.com/dealers/signup)
+- [Support](https://www.lendbuzz.com/contact)
+- [Blog](https://www.lendbuzz.com/dealer-resources)
+- [Compliance](https://www.lendbuzz.com/state-licenses)
+- [Terms of service](https://www.lendbuzz.com/tos)
+- [Privacy policy](https://www.lendbuzz.com/privacy)
+- [GitHub](https://github.com/LendBuzz)
+- [Status](https://www.lendbuzz.com/system-status)
+
+## API Evangelist rating
+
+**Kin Score 21.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| `/openapi.json`, `/openapi.yaml`, `/swagger.json`, `/api-docs`, `/llms.txt` on `www`, apex, `app`, `api` | 404 on the marketing site; `app.lendbuzz.com` returns 200 with an HTML redirect shell (SPA catch-all — verified not JSON) |
-| `developer.` / `docs.` / `developers.` / `api-docs.` / `partner(s).` / `sandbox.` `.lendbuzz.com` | NXDOMAIN |
-| `api.lendbuzz.com` | DNS resolves (AWS) but TCP 443 and 80 both time out — not publicly reachable |
-| `lendbuzz.readme.io` / `lendbuzz.gitbook.io` | 404 |
-| `lendbuzz.stoplight.io` | Unclaimed placeholder workspace ("Create your own free Stoplight workspace") — no projects, Stoplight API returns 404 |
-| `/.well-known/*` (security.txt, openid-configuration, oauth-authorization-server, api-catalog, ai-plugin.json, agent-card.json, agent.json) | 404 on every host |
-| GitHub org `LendBuzz` | 2 public repos (an interview exercise, a versioning GitHub Action) — no SDKs, no specs |
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 42.1 |
 
-Dealer integration is intermediated by the **Dealertrack** and **RouteOne** F&I networks — dealers submit
-credit applications through those platforms or directly in the Lendbuzz Dealer Portal.
+**Agent readiness 0.0** — human-only
 
-## Artifacts
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Path | Type | Method |
-|---|---|---|
-| `apis.yml` | APIs.json 0.20 | searched |
-| `lifecycle/lendbuzz-lifecycle.yml` | Lifecycle / StatusPage / SLA | searched |
-| `conformance/lendbuzz-conformance.yml` | Conformance (regulatory) | searched |
-| `security/lendbuzz-domain-security.yml` | DomainSecurity | probed |
-| `well-known/lendbuzz-well-known.yml` | probe record (nothing published) | probed |
-| `llms/lendbuzz-llms.txt` | LLMsTxt | generated |
+**Regulatory alignment 21.8** — Horizontal (data, software, accessibility, platform)
 
-No vulnerability disclosure program, security.txt, bug bounty or trust center was found
-(`probe-security-programs.py` → `vdp=none trust=none`).
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lendbuzz/](https://apis.io/providers/lendbuzz/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lendbuzz: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lendbuzz/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
